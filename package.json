@@ -13,7 +13,7 @@
 	"author": "hexadecibelle",
 	"license": "ISC",
 	"dependencies": {
-		"cdigit": "^2.6.2"
+		"@konfirm/iso7064": "^2.0.1"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.13.0",
