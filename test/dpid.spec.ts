@@ -15,9 +15,9 @@ describe( 'validate() returns true with valid mod37_36 checksums', () => {
 	}
 } );
 
-describe( 'validate() returns true with valid mod37_36 checksums', () => {
-	it( 'Should throw an error when input is incorrect length', () => {
-		expect( DPid.validate( 'nzfpyzazuoki5av1l' ) ).toThrow();
-	} );
+it( 'Should throw an error when input is incorrect length', () => {
+	expect( () => {
+		DPid.validate( 'nzfpyzazuoki5av1l' );
+	} ).toThrow();
 } );
 
