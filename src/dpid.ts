@@ -3,13 +3,15 @@
 const { Mod37_36 } = require( '@konfirm/iso7064' );
 
 const DPid = {
-	sanitise: function( inp ) {
+	sanitise: function( inp:string ) {
 		let sanitised:string = inp.split( '-' ).join( '' );
 		sanitised = sanitised.toUpperCase();
 
 		return sanitised;
 	},
 	validate: function( inp:string ):boolean {
+		inp = this.sanitise( inp );
+
 		if( inp.length !== 18 ) {
 			throw new Error( 'Input is incorrect length. Expects 18 characters.' );
 		}

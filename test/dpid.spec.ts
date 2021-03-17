@@ -7,6 +7,21 @@ const validMod37_36 = [
 	'nc7a0kon7x1b9ebwah'
 ];
 
+// DPids taken from YouTube
+// https://support.google.com/youtube/answer/3505274?hl=en-GB
+const validDPid = [
+	'PADPIDA3897722461G',
+	'PADPIDA2013020802I'
+];
+
+describe( 'validate() returns true with YouTube DPids', () => {
+	for( let i:number = validDPid.length - 1; i >= 0; i-- ) {
+		it( 'Should return true when input is ' + validDPid[ i ], () => {
+			expect( DPid.validate( validDPid[ i ] ) ).toBe( true );
+		} );
+	}
+} );
+
 describe( 'validate() returns true with valid 18-character mod37_36 checksums', () => {
 	for( let i:number = validMod37_36.length - 1; i >= 0; i-- ) {
 		it( 'Should return true when input is ' + validMod37_36[ i ], () => {
