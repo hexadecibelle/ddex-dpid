@@ -4,8 +4,7 @@ import DPid from '../src/dpid';
 const validMod37_36 = [
 	'k6br004z4iqg3hg2vw',
 	'x3f92svglggaebo4y2',
-	'nc7a0kon7x1b9ebwah',
-	'nzfpyzazuoki5av1l'
+	'nc7a0kon7x1b9ebwah'
 ];
 
 describe( 'validate() returns true with valid mod37_36 checksums', () => {
@@ -15,3 +14,10 @@ describe( 'validate() returns true with valid mod37_36 checksums', () => {
 		} );
 	}
 } );
+
+describe( 'validate() returns true with valid mod37_36 checksums', () => {
+	it( 'Should throw an error when input is incorrect length', () => {
+		expect( DPid.validate( 'nzfpyzazuoki5av1l' ) ).toThrow();
+	} );
+} );
+
