@@ -4,7 +4,7 @@ const { Mod37_36 } = require( '@konfirm/iso7064' );
 
 const DPid = {
 	validate: function( inp:string ):boolean {
-		return true;
+		return Mod37_36.validate( inp );
 	}
 };
 
