@@ -4,7 +4,8 @@ import DPid from '../src/dpid';
 const validMod37_36 = [
 	'k6br004z4iqg3hg2vw',
 	'x3f92svglggaebo4y2',
-	'nc7a0kon7x1b9ebwah'
+	'nc7a0kon7x1b9ebwah',
+	'nzfpyzazuoki5av1l'
 ];
 
 describe( 'validate() returns true with valid mod37_36 checksums', () => {
